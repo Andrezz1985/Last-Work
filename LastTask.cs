@@ -10,9 +10,34 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            void FillNewM(string[] oldArray, string[] newArray, int lengthLimit2)
+            {
+                int temp = 0;
+                for (int i = 0; i < oldArray.Length; i++)
+                {
+                    if (oldArray[i].Length <= lengthLimit2)
+                    {
+                        newArray[temp] = oldArray[i];
+                        temp++;
+                    }
+                }
+                
+            }
+
+            int CheckM(string[] array, int lengthLimit2)
+            {
+                int result = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    if (array[i].Length <= lengthLimit2) result++;
+                }
+                return result;
+            }
+            
             string PrintM(string[] array)
             {
                 string result = string.Empty;
+            
                 result = "[ ";
                 for (int i = 0; i < array.Length; i++)
                 {
